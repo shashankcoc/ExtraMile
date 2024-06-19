@@ -1,0 +1,76 @@
+
+/* EmployeeCard.css */
+.employee-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    background-color: #fff;
+  }
+  .employee-avatar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .employee-avatar img {
+    
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* object-fit: cover; */
+    /* margin-bottom: 10px; */
+  }
+  
+  .employee-info {
+    text-align: center;
+  }
+  
+  .review-feedback {
+    margin-top: 20px;
+  }
+  
+  .review-feedback h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .review-feedback p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+  }
+  .input-review-fields{
+    padding: 8px;
+    
+  }
+  .input-review{
+margin: 5%;
+  }
+  .btn-review{
+    background-color: rgb(53, 57, 53) ;
+    border: 0.5px solid rgb(147, 144, 140);
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+  }
+  .btn-review:hover{
+    background-color:rgb(25, 24, 24) ;
+  }
+
+  .btn-delete{
+    background-color: rgb(53, 57, 53) ;
+    border: 0.5px solid rgb(53, 57, 53);
+    cursor: pointer;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .btn-delete:hover{
+    background-color:rgb(0, 0, 0) ;
+  }
