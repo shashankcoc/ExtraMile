@@ -52,29 +52,31 @@ const Register = () => {
     }
   };
   return (
-    <div className="container">
-      <h1 className="title">Register</h1>
-      <form onSubmit={handleSubmit} className="register-form">
-        <label>
-          Name:
-          <input type="text" name="name" required />
-        </label>
-        <label>
-          Email:
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Password:
-          <input type="password" name="password" required />
-        </label>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <button type="submit">Register</button>
-          <button type="submit" onClick={handleLogin}>
-            Login
-          </button>
-        </div>
-        {error && <p className="error">{error}</p>}
-      </form>
+    <div className="main-container">
+      <div className="container">
+        <h1 className="title">Register</h1>
+        <form onSubmit={handleSubmit} className="register-form">
+          <label>
+            Name:
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email:
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Password:
+            <input type="password" name="password" required />
+          </label>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <button type="submit">Register</button>
+            <button type="submit" onClick={handleLogin}>
+              Login
+            </button>
+          </div>
+          {error && <p className="error">{error}</p>}
+        </form>
+      </div>
     </div>
   );
 };

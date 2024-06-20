@@ -7,6 +7,7 @@ const Card = ({ employee }) => {
   const [newReview, setNewReview] = useState("");
   const [error, setError] = useState(null);
   const [user, setUser] = useState(false);
+  const [editReview, setEditReview] = useState(null);
 
   useEffect(() => {
     const fetchLoginData = async () => {
@@ -28,6 +29,10 @@ const Card = ({ employee }) => {
 
   const handleAddReview = async (id) => {
     try {
+      if (!newReview.trim()) {
+        setError("Review cannot be blank");
+        return;
+      }
       const snapshot = await db
         .collection("login")
         .where("email", "==", id)
@@ -73,7 +78,36 @@ const Card = ({ employee }) => {
       setError("Error deleting review: " + error.message);
     }
   };
+  // const handleEditReview = async (id, reviewToEdit) => {
+  //   try {
+  //     const snapshot = await db
+  //       .collection("login")
+  //       .where("email", "==", id)
+  //       .get();
 
+  //     if (!snapshot.empty) {
+  //       const companyDoc = snapshot.docs[0];
+  //       const companyRef = db.collection("login").doc(companyDoc.id);
+  //       let companyData = companyDoc.data().reviews || [];
+
+  //       // Find the index of the review to edit
+  //       const index = companyData.findIndex(
+  //         (review) => review === reviewToEdit
+  //       );
+
+  //       if (index !== -1) {
+  //         // Set edit mode for this review
+  //         setEditReview({ index, review: reviewToEdit });
+  //       } else {
+  //         setError("Review not found for editing.");
+  //       }
+  //     } else {
+  //       setError("No document found with the specified email.");
+  //     }
+  //   } catch (error) {
+  //     setError("Error editing review: " + error.message);
+  //   }
+  // };
   return (
     <div className="employee-card">
       <div className="employee-avatar">
@@ -101,12 +135,22 @@ const Card = ({ employee }) => {
                 >
                   <p>{review}</p>
                   {!user && (
-                    <button
-                      onClick={() => handleDeleteReview(employee.email, review)}
-                      className="btn-delete"
-                    >
-                      Delete
-                    </button>
+                    <div>
+                      <button
+                        onClick={() => handleEditReview(employee.email, review)}
+                        className="btn-edit"
+                      >
+                        🖊️
+                      </button>
+                      <button
+                        onClick={() =>
+                          handleDeleteReview(employee.email, review)
+                        }
+                        className="btn-delete"
+                      >
+                        🗑️
+                      </button>
+                    </div>
                   )}
                 </div>
               ))}
@@ -123,6 +167,7 @@ const Card = ({ employee }) => {
                 placeholder="Add review"
               />
             )}
+
             {!user && (
               <button
                 className="btn-review"
@@ -132,6 +177,7 @@ const Card = ({ employee }) => {
               </button>
             )}
           </div>
+          <span style={{ color: "red" }}>{error}</span>
         </div>
       </div>
     </div>

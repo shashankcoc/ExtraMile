@@ -23,18 +23,24 @@ const Logout = () => {
   };
 
   return (
-    <div className="Logout">
+    <div>
       {userEmail ? (
-        <>
-          <span>Welcome, {userEmail}</span>
-          <button onClick={handleLogout}>Logout</button>
+        <div className="logout">
+          <p className="logout-welcome">
+            📙 Welcome to your personalized dashboard
+          </p>
+          <button className="btn-logout" onClick={handleLogout}>
+            Logout
+          </button>
           {error && <p className="error">{error}</p>}
-        </>
+        </div>
       ) : (
-        <>
-          <h5>Please login to access the dashboard.</h5>
-          <button onClick={() => navigate("/login")}>Login</button>
-        </>
+        <div className="login">
+          <h5 className="login-header">Please login to access the dashboard</h5>
+          <button className="btn-logout" onClick={() => navigate("/login")}>
+            Login
+          </button>
+        </div>
       )}
     </div>
   );

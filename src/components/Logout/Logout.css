@@ -1,0 +1,39 @@
+.logout-welcome{
+    color: rgba(42, 37, 37, 0.738);
+    margin-right: 50px;
+    font-size: large;
+    font-weight: 500;
+}
+.logout{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 10px;
+}
+.login{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.btn-logout{
+    background-color: rgb(53, 57, 53) ;
+    border: 0.5px solid rgb(53, 57, 53);
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    font-weight:300;
+    border-radius: 10px;
+    padding: 8px;
+    width: max-content;
+  }
+  .btn-logout:hover{
+    background-color:rgb(0, 0, 0) ;
+  }
+  .login-header{
+    margin: 20px;
+    font-size: large;
+    font-weight: 800;  
+}
+
+/* Night Mode */

@@ -38,16 +38,20 @@ const Dashboard = () => {
 
   return (
     <>
-      <Logout />
-      {!admin && userEmail && <Card employee={single} />}
-      {!admin && !userEmail && <p>Please login to view your data.</p>}
-      {admin && (
-        <div className="container-employee">
-          {loginData.map((employee) => (
-            <Card key={employee.id} employee={employee} />
-          ))}
-        </div>
-      )}
+      <div className="dashboard-logout">
+        <Logout />
+      </div>
+      <div>
+        {!admin && userEmail && <Card employee={single} />}
+        {!admin && !userEmail && <p></p>}
+        {admin && (
+          <div className="container-employee">
+            {loginData.map((employee) => (
+              <Card key={employee.id} employee={employee} />
+            ))}
+          </div>
+        )}
+      </div>
     </>
   );
 };

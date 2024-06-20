@@ -1,22 +1,9 @@
 import { defineConfig } from "vite";
-import { VitePWA } from "vite-plugin-pwa";
-import path from "path";
+// import { VitePWA } from "vite-plugin-pwa";
+// import path from "path";
+import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    VitePWA({
-      includeAssets: ["favicon.svg", "robots.txt", "apple-touch-icon.png"],
-    }),
-  ],
-  resolve: {
-    alias: {
-      "@": path.resolve(new URL(".", import.meta.url).pathname, "src"),
-    },
-    // Ensure Firebase modules are treated as external dependencies
-    build: {
-      rollupOptions: {
-        external: /^firebase/,
-      },
-    },
-  },
+  plugins: [react()],
 });

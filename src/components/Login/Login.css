@@ -9,14 +9,16 @@
   body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+  }
+  .main-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
-  
   /* Container for the form */
   .container {
+ 
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -26,7 +28,7 @@
   
   /* Title styling */
   .title {
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 20px;
     color: #333;
   }
