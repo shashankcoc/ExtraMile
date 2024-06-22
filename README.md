@@ -7,38 +7,44 @@ The Employee Performance Review Feedback System is a web application designed to
 <br>
 <br>
 
-**Technologies Used
-**The application was developed using React for the frontend and Firebase as the backend. The choice of technologies was driven by the need for rapid development and ease of use. Additionally, pure CSS was used to reduce package size and maintain a lightweight approach.
+**Technologies Used**
+
+The application was developed using React for the frontend and Firebase as the backend. The choice of technologies was driven by the need for rapid development and ease of use. Additionally, pure CSS was used to reduce package size and maintain a lightweight approach.
 Features Implemented
 <br>
 <br>
 The following features have been implemented:
-**Admin View
-**• Add employees
+**Admin View**
+
+• Add employees
 • View employees
 • Add performance reviews
 • View performance reviews
 • Assign employees to participate in another employee's performance review
 <br>
 <br>
-**Employee View
-**• List of performance reviews requiring feedback
+**Employee View**
+
+• List of performance reviews requiring feedback
 • Submit Feedback (partial implementation, pending completion)
 <br>
 <br>
-**Responsive Design
-**The application is fully responsive and compatible with all devices, ensuring a seamless user experience across various platforms.
+**Responsive Design**
+
+The application is fully responsive and compatible with all devices, ensuring a seamless user experience across various platforms.
 <br>
 <br>
-**Scope of Improvement
-**While the application has made significant progress, there are areas that require further development and refinement. These include:
+**Scope of Improvement**
+
+While the application has made significant progress, there are areas that require further development and refinement. These include:
 • Implementing edit functionality for employees and performance reviews
 • Completing the feedback submission feature
 • Enhancing the user interface and user experience
 • Exploring opportunities for scalability and performance optimization
 <br>
 <br>
-**Hosting Challenges
-**Currently, the application is not hosted due to difficulties in configuring Vite with React. If I had more time, I would also focus on hosting the web application. For now, I am trying to resolve the hosting issues and will share the application as soon as it is successfully hosted.
-**Edit [Hosted Completed]
-**
+**Hosting Challenges**
+
+Currently, the application is not hosted due to difficulties in configuring Vite with React. If I had more time, I would also focus on hosting the web application. For now, I am trying to resolve the hosting issues and will share the application as soon as it is successfully hosted.
+
+**Edit [Hosted Completed]**
